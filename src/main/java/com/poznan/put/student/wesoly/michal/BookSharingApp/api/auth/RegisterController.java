@@ -4,10 +4,12 @@ import com.google.gson.Gson;
 import com.poznan.put.student.wesoly.michal.BookSharingApp.dao.UserDAO;
 import com.poznan.put.student.wesoly.michal.BookSharingApp.dao.UserParser;
 import com.poznan.put.student.wesoly.michal.BookSharingApp.model.User;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -44,12 +46,12 @@ public class RegisterController {
                     return gson.toJson(jsonResponse);
                 }
                 jsonResponse.addToResponseBody("register", 400);
-                return gson.toJson(jsonResponse);
+                throw new ResponseStatusException(HttpStatus.NOT_ACCEPTABLE, "Such user already exists.");
             }
             catch (SQLException e) {
                 System.out.println(e);
             }
         }
-        return gson.toJson(jsonResponse);
+        throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Unknown error occurred while proccessing your request.");
     }
 }

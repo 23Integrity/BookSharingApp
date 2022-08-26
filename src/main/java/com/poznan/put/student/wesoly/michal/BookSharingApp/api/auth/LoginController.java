@@ -48,7 +48,7 @@ public class LoginController {
                     jsonResponse.addToResponseBody("login", 200);
                     return gson.toJson(jsonResponse);
                 }
-                throw new ResponseStatusException(HttpStatus.NOT_ACCEPTABLE, "Such user already exists.");
+                throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No such user exists.");
             }
             catch (SQLException e) {
                 System.out.println(e);
