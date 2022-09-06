@@ -6,6 +6,6 @@ import java.sql.Statement;
 
 public class BooksDAO extends DAO {
 
-    BooksDAO() throws SQLException {
+    public BooksDAO() throws SQLException {
     }
 }
