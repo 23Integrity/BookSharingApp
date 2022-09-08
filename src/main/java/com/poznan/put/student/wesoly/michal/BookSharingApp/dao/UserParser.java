@@ -5,7 +5,7 @@ import com.poznan.put.student.wesoly.michal.BookSharingApp.model.User;
 public class UserParser {
     //Metoda tworząca zapytanie SQL zapisujące uzytkownika do bazy
     public static String createSaveQuery(User user) {
-        return "INSERT INTO users VALUES ('"+ user.getLogin() + "', '" + user.getPassword() +"');";
+        return "INSERT INTO users (login, password) VALUES ('"+ user.getLogin() + "', '" + user.getPassword() +"');";
     }
 
     public static String checkIfPasswordIsCorrectQuery(User user) {
