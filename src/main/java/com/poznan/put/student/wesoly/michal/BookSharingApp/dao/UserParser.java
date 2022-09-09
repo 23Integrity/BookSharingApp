@@ -9,9 +9,9 @@ public class UserParser {
     }
 
     public static String checkIfPasswordIsCorrectQuery(User user) {
-        return "SELECT COUNT(1) AS 'count' FROM users WHERE login = '" + user.getLogin() + "' AND password = '" + user.getPassword() + "'";
+        return "SELECT COUNT(1) FROM users WHERE login = '" + user.getLogin() + "' AND password = '" + user.getPassword() + "'";
     }
     public static String checkIfUserExists(User user) {
-        return "SELECT COUNT(1) AS 'count' FROM users WHERE login = '" + user.getLogin() + "'";
+        return "SELECT COUNT(1) FROM users WHERE login = '" + user.getLogin() + "'";
     }
 }
