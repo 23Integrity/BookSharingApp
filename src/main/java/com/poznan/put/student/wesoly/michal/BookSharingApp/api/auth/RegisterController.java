@@ -6,6 +6,7 @@ import com.poznan.put.student.wesoly.michal.BookSharingApp.dao.UserParser;
 import com.poznan.put.student.wesoly.michal.BookSharingApp.model.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +17,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Optional;
 
+@CrossOrigin
 @RestController
 public class RegisterController {
     @PostMapping(value = "/api/auth/signup", produces = MediaType.APPLICATION_JSON_VALUE)

@@ -18,9 +18,9 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Optional;
 
+@CrossOrigin
 @RestController
 public class LoginController {
-
     @PostMapping(value = "/api/auth/signin", produces = MediaType.APPLICATION_JSON_VALUE)
     public String sign_in(@RequestParam(name = "login") Optional<String> login,
                           @RequestParam(name = "password") Optional<String> password) {
