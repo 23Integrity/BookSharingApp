@@ -19,14 +19,14 @@ public class BookSharingAppApplication {
 
 	public static void main(String[] args) throws SQLException {
 		SpringApplication.run(BookSharingAppApplication.class, args);
-//		GoogleBooksAPIController controller = new GoogleBooksAPIController(new RestTemplateBuilder());
-//		Books book = controller.getBookISBNJSON("9788380326460");
-//		BooksDAO dao = new BooksDAO();
-////		dao.runQuery(BooksParser.createSaveQuery(book));
-//		System.out.println(dao.runQuery(BooksParser.findBookWithISBN("9788380326460")));
-		UserDAO dao = new UserDAO();
-		User user = new User("test", "test");
-		dao.runQuery(UserParser.createSaveQuery(user));
+		GoogleBooksAPIController controller = new GoogleBooksAPIController(new RestTemplateBuilder());
+		Books book = controller.getBookISBNJSON("9788380326460");
+		BooksDAO dao = new BooksDAO();
+		dao.runQuery(BooksParser.createSaveQuery(book));
+		System.out.println(dao.runQuery(BooksParser.findBookWithISBN("9788380326460")));
+//		UserDAO dao = new UserDAO();
+//		User user = new User("test", "test");
+//		dao.runQuery(UserParser.createSaveQuery(user));
 	}
 
 }
