@@ -1,5 +1,8 @@
 package com.poznan.put.student.wesoly.michal.BookSharingApp.dao;
 
+import org.springframework.beans.factory.annotation.Value;
+
+import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.Driver;
 import java.sql.DriverManager;
@@ -11,7 +14,9 @@ public class DatabaseConnection {
         DriverManager.registerDriver( myDriver );
     }
 
-    private final static String DBURL = "jdbc:postgresql://ec2-54-76-43-89.eu-west-1.compute.amazonaws.com:5432/d114kje7vdncln?sslmode=require";
+    @Value("${spring.datasource.url}")
+    private final static String DBURL =
+            "jdbc:postgresql://ec2-54-76-43-89.eu-west-1.compute.amazonaws.com:5432/d114kje7vdncln?sslmode=require";
     private Connection connection = null;
     private boolean isConnected = false;
 
