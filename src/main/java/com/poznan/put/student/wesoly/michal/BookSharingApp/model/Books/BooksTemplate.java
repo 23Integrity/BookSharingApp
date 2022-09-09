@@ -3,7 +3,8 @@ package com.poznan.put.student.wesoly.michal.BookSharingApp.model.Books;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-    public class Books implements Serializable {
+// Please don't touch it, it's a complete mess I don't even understand anymore, but it works.
+    public class BooksTemplate implements Serializable {
         private ArrayList<BookTemplate> items;
         public ArrayList<BookTemplate> getItems() {
             return items;
