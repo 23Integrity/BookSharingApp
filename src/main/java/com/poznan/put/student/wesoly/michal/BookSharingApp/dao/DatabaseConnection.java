@@ -2,7 +2,6 @@ package com.poznan.put.student.wesoly.michal.BookSharingApp.dao;
 
 import org.springframework.beans.factory.annotation.Value;
 
-import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.Driver;
 import java.sql.DriverManager;

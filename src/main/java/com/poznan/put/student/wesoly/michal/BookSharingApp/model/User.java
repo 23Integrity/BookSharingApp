@@ -1,6 +1,7 @@
 package com.poznan.put.student.wesoly.michal.BookSharingApp.model;
 
 public class User {
+    private String id;
     private String login;
     private String password;
     private UserType type;
@@ -30,6 +31,21 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public UserType getType() {
+        return type;
+    }
+
+    public void setType(UserType type) {
+        this.type = type;
     }
 
 }

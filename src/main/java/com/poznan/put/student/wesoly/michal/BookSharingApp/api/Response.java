@@ -1,7 +1,6 @@
-package com.poznan.put.student.wesoly.michal.BookSharingApp.api.auth;
+package com.poznan.put.student.wesoly.michal.BookSharingApp.api;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 

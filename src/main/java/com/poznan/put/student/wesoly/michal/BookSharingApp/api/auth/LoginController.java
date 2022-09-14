@@ -1,7 +1,7 @@
 package com.poznan.put.student.wesoly.michal.BookSharingApp.api.auth;
 
 import com.google.gson.Gson;
-import com.poznan.put.student.wesoly.michal.BookSharingApp.api.auth.errors.UserExistsStatus;
+import com.poznan.put.student.wesoly.michal.BookSharingApp.api.Response;
 import com.poznan.put.student.wesoly.michal.BookSharingApp.dao.UserDAO;
 import com.poznan.put.student.wesoly.michal.BookSharingApp.dao.UserParser;
 import com.poznan.put.student.wesoly.michal.BookSharingApp.model.User;
