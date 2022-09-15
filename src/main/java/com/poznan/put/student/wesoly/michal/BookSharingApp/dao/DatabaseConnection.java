@@ -15,13 +15,13 @@ public class DatabaseConnection {
 
     @Value("${spring.datasource.url}")
     private final static String DBURL =
-            "jdbc:postgresql://ec2-54-76-43-89.eu-west-1.compute.amazonaws.com:5432/d114kje7vdncln?sslmode=require";
+            "jdbc:postgresql://ec2-52-51-3-22.eu-west-1.compute.amazonaws.com:5432/dhgciti3li751?sslmode=require";
     private Connection connection = null;
     private boolean isConnected = false;
 
     public void connect() throws SQLException {
         if (!isConnected) {
-            connection = DriverManager.getConnection(DBURL, "dyyfikenvgkqax", "dc5c76532800ed49bbdfcab316aff2a56ce012947d0c8edd8bb284002c2b179b");
+            connection = DriverManager.getConnection(DBURL, "pxjcpesuxpkdui", "415139ec8ff3155fac9da0080fed2af35c8d6492d441a4ef0028db71be4b7dd1");
             isConnected = true;
         }
     }

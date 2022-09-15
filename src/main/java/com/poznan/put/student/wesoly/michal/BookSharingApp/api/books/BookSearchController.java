@@ -1,4 +1,4 @@
-package com.poznan.put.student.wesoly.michal.BookSharingApp.api.listings;
+package com.poznan.put.student.wesoly.michal.BookSharingApp.api.books;
 
 import com.google.gson.Gson;
 import com.poznan.put.student.wesoly.michal.BookSharingApp.api.books.GoogleBooksAPIController;
@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.Optional;
 
 @CrossOrigin
